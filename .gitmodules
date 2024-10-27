@@ -1,0 +1,3 @@
+[submodule "DPO/DiffusionDPO"]
+	path = DPO/DiffusionDPO
+	url = https://github.com/SalesforceAIResearch/DiffusionDPO.git
