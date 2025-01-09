@@ -1,0 +1,1 @@
+{"_timestamp":1.7302644278424869e+09,"model_mse_unaccumulated":0.27448126673698425,"ref_mse_unaccumulated":0.26123046875,"implicit_acc_accumulated":0.00146484375,"_runtime":3999.581906226,"_step":510,"train_loss":0.002615107921883464,"_wandb":{"runtime":3999}}

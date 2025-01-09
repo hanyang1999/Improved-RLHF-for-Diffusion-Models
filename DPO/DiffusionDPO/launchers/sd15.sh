@@ -16,5 +16,5 @@ accelerate launch train.py \
   --cache_dir="/export/share/datasets/vision_language/pick_a_pic_v2/" \
   --checkpointing_steps 500 \
   --beta_dpo 5000 \
-   --output_dir="tmp-sd15"
+  --output_dir="tmp-sd15"
 

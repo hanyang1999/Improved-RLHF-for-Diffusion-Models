@@ -1,0 +1,141 @@
+_wandb:
+    value:
+        cli_version: 0.18.5
+        m: []
+        python_version: 3.11.10
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 55
+                - 71
+                - 83
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 55
+                - 71
+                - 83
+            "3":
+                - 13
+                - 23
+                - 55
+            "4": 3.11.10
+            "5": 0.18.5
+            "6": 4.30.2
+            "8":
+                - 5
+            "12": 0.18.5
+            "13": linux-x86_64
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+adam_weight_decay:
+    value: 0.01
+allow_tf32:
+    value: false
+beta_dpo:
+    value: 5000
+cache_dir:
+    value: .cache/datasets/vision_language/pick_a_pic_v2_top10p
+caption_column:
+    value: caption
+checkpointing_steps:
+    value: 100
+choice_model:
+    value: ""
+dataloader_num_workers:
+    value: 16
+dataset_config_name:
+    value: null
+dataset_name:
+    value: yuvalkirstain/pickapic_v2
+dreamlike_pairs_only:
+    value: false
+gradient_accumulation_steps:
+    value: 512
+gradient_checkpointing:
+    value: false
+hard_skip_resume:
+    value: false
+hub_model_id:
+    value: null
+image_column:
+    value: image
+input_perturbation:
+    value: 0
+learning_rate:
+    value: 2.048e-05
+local_rank:
+    value: 0
+logging_dir:
+    value: logs
+lr_scheduler:
+    value: constant_with_warmup
+lr_warmup_steps:
+    value: 500
+max_grad_norm:
+    value: 1
+max_train_samples:
+    value: null
+max_train_steps:
+    value: 500
+mixed_precision:
+    value: fp16
+no_hflip:
+    value: false
+noise_offset:
+    value: 0
+num_train_epochs:
+    value: 12
+output_dir:
+    value: diffusion-dpo-sd15
+pretrained_model_name_or_path:
+    value: runwayml/stable-diffusion-v1-5
+pretrained_vae_model_name_or_path:
+    value: null
+proportion_empty_prompts:
+    value: 0.2
+random_crop:
+    value: false
+report_to:
+    value: wandb
+resolution:
+    value: 512
+resume_from_checkpoint:
+    value: latest
+revision:
+    value: null
+run_name:
+    value: diffusion-dpo-baseline
+scale_lr:
+    value: true
+sdxl:
+    value: false
+seed:
+    value: null
+sft:
+    value: false
+split:
+    value: train
+tracker_project_name:
+    value: Diffusion-DPO
+train_batch_size:
+    value: 1
+train_data_dir:
+    value: null
+train_method:
+    value: dpo
+unet_init:
+    value: ""
+use_adafactor:
+    value: false

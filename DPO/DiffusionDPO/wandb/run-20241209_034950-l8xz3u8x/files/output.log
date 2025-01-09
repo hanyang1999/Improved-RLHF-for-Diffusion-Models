@@ -1,0 +1,72 @@
+12/09/2024 03:49:51 - INFO - __main__ - ***** Running training *****
+12/09/2024 03:49:51 - INFO - __main__ -   Num examples = 85172
+12/09/2024 03:49:51 - INFO - __main__ -   Num Epochs = 12
+12/09/2024 03:49:51 - INFO - __main__ -   Instantaneous batch size per device = 1
+12/09/2024 03:49:51 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 2048
+12/09/2024 03:49:51 - INFO - __main__ -   Gradient Accumulation steps = 512
+12/09/2024 03:49:51 - INFO - __main__ -   Total optimization steps = 500
+Checkpoint 'latest' does not exist. Starting a new training run.
+Steps:   0%|                                                                                                                                                                                            | 0/500 [00:18<?, ?it/s, implicit_acc=0.5, lr=0, step_loss=0.698]Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7aaf961d9e40>
+Traceback (most recent call last):
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1478, in __del__
+    self._shutdown_workers()
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1437, in _shutdown_workers
+    self._mark_worker_as_unavailable(worker_id, shutdown=True)
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1398, in _mark_worker_as_unavailable
+    assert self._workers_done_event.is_set() == shutdown
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/multiprocessing/synchronize.py", line 335, in is_set
+    with self._cond:
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/multiprocessing/synchronize.py", line 237, in __enter__
+    return self._lock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO/train.py", line 1244, in <module>
+    main()
+  File "/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO/train.py", line 1148, in main
+    ref_pred = ref_unet(
+               ^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/unet_2d_condition.py", line 985, in forward
+    sample = upsample_block(
+             ^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/unet_2d_blocks.py", line 2187, in forward
+    hidden_states = attn(
+                    ^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/transformer_2d.py", line 309, in forward
+    hidden_states = block(
+                    ^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/attention.py", line 194, in forward
+    attn_output = self.attn1(
+                  ^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/attention_processor.py", line 322, in forward
+    return self.processor(
+           ^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/attention_processor.py", line 1125, in __call__
+    hidden_states = attn.to_out[0](hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,81 @@
+{
+  "os":  "Linux-6.8.0-36-generic-x86_64-with-glibc2.39",
+  "python":  "3.11.10",
+  "startedAt":  "2024-12-09T03:49:50.737290Z",
+  "args":  [
+    "--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5",
+    "--dataset_name=yuvalkirstain/pickapic_v2",
+    "--train_batch_size=1",
+    "--dataloader_num_workers=16",
+    "--gradient_accumulation_steps=512",
+    "--max_train_steps=500",
+    "--lr_scheduler=constant_with_warmup",
+    "--lr_warmup_steps=500",
+    "--learning_rate=1e-8",
+    "--scale_lr",
+    "--cache_dir=.cache/datasets/vision_language/pick_a_pic_v2_top10p",
+    "--checkpointing_steps",
+    "100",
+    "--beta_dpo",
+    "5000",
+    "--output_dir=diffusion-dpo-sd15",
+    "--report_to=wandb",
+    "--run_name=diffusion-dpo-baseline"
+  ],
+  "program":  "/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO/train.py",
+  "codePath":  "DPO/DiffusionDPO/train.py",
+  "git":  {
+    "remote":  "https://github.com/hanyang1999/Improved-RLHF-for-Diffusion-Models.git",
+    "commit":  "65030282f862effa8c0bc86ede555189c9454e24"
+  },
+  "email":  "hz2684@columbia.edu",
+  "root":  "/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO",
+  "host":  "smgpusrv1",
+  "username":  "hanyang",
+  "executable":  "/home/hanyang/anaconda3/envs/diffusion-dpo/bin/python",
+  "codePathLocal":  "train.py",
+  "cpu_count":  48,
+  "cpu_count_logical":  96,
+  "gpu":  "NVIDIA L40S",
+  "gpu_count":  4,
+  "disk":  {
+    "/":  {
+      "total":  "844362571776",
+      "used":  "278399033344"
+    }
+  },
+  "memory":  {
+    "total":  "1081864204288"
+  },
+  "cpu":  {
+    "count":  48,
+    "countLogical":  96
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA L40S",
+      "memoryTotal":  "48305799168",
+      "cudaCores":  18176,
+      "architecture":  "Ada"
+    },
+    {
+      "name":  "NVIDIA L40S",
+      "memoryTotal":  "48305799168",
+      "cudaCores":  18176,
+      "architecture":  "Ada"
+    },
+    {
+      "name":  "NVIDIA L40S",
+      "memoryTotal":  "48305799168",
+      "cudaCores":  18176,
+      "architecture":  "Ada"
+    },
+    {
+      "name":  "NVIDIA L40S",
+      "memoryTotal":  "48305799168",
+      "cudaCores":  18176,
+      "architecture":  "Ada"
+    }
+  ],
+  "cudaVersion":  "12.5"
+}

@@ -1,0 +1,62 @@
+10/30/2024 03:31:05 - INFO - __main__ - ***** Running training *****
+10/30/2024 03:31:05 - INFO - __main__ -   Num examples = 85172
+10/30/2024 03:31:05 - INFO - __main__ -   Num Epochs = 12
+10/30/2024 03:31:05 - INFO - __main__ -   Instantaneous batch size per device = 1
+10/30/2024 03:31:05 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 512
+10/30/2024 03:31:05 - INFO - __main__ -   Gradient Accumulation steps = 128
+10/30/2024 03:31:05 - INFO - __main__ -   Total optimization steps = 2000
+Checkpoint 'latest' does not exist. Starting a new training run.
+Steps:   0%|                                                                                           | 1/2000 [00:23<13:11:58, 23.77s/it, implicit_acc=0.25, lr=1.02e-8, step_loss=0.629]10/30/2024 03:31:29 - INFO - torch.nn.parallel.distributed - Reducer buckets have been rebuilt in this iteration.
+Steps:   0%|▎                                                                                          | 6/2000 [02:28<12:32:36, 22.65s/it, implicit_acc=0.25, lr=6.14e-8, step_loss=0.725]Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7b9fc6fc1e40>
+Traceback (most recent call last):
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1478, in __del__
+    self._shutdown_workers()
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1442, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/multiprocessing/popen_fork.py", line 40, in wait
+    if not wait([self.sentinel], timeout):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/multiprocessing/connection.py", line 948, in wait
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO/train.py", line 1244, in <module>
+    main()
+  File "/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO/train.py", line 1148, in main
+    ref_pred = ref_unet(
+               ^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/unet_2d_condition.py", line 985, in forward
+    sample = upsample_block(
+             ^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/unet_2d_blocks.py", line 2187, in forward
+    hidden_states = attn(
+                    ^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/diffusers/models/transformer_2d.py", line 280, in forward
+    hidden_states = self.norm(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/modules/normalization.py", line 273, in forward
+    return F.group_norm(
+           ^^^^^^^^^^^^^
+  File "/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/torch/nn/functional.py", line 2530, in group_norm
+    return torch.group_norm(input, num_groups, weight, bias, eps, torch.backends.cudnn.enabled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

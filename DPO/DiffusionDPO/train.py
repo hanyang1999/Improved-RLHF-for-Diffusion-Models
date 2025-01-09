@@ -294,7 +294,7 @@ def parse_args():
     parser.add_argument(
         "--report_to",
         type=str,
-        default="tensorboard",
+        default="wandb",
         help=(
             'The integration to report the results and logs to. Supported platforms are `"tensorboard"`'
             ' (default), `"wandb"` and `"comet_ml"`. Use `"all"` to report to all integrations.'
@@ -323,11 +323,19 @@ def parse_args():
     parser.add_argument(
         "--tracker_project_name",
         type=str,
-        default="tuning",
+        default="Diffusion-DPO",
         help=(
             "The `project_name` argument passed to Accelerator.init_trackers for"
             " more information see https://huggingface.co/docs/accelerate/v0.17.0/en/package_reference/accelerator#accelerate.Accelerator"
         ),
+    )
+    parser.add_argument(
+        "--run_name",
+        type=str,
+        default="diffusion-dpo",
+        help=(
+            "Run name"
+                            ),
     )
 
     ## SDXL
@@ -445,7 +453,7 @@ def main():
         log_with=args.report_to,
         project_config=accelerator_project_config,
     )
-
+        
     # Make one log on every process with the configuration for debugging.
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
@@ -470,6 +478,7 @@ def main():
     if accelerator.is_main_process:
         if args.output_dir is not None:
             os.makedirs(args.output_dir, exist_ok=True)
+
     ### END ACCELERATOR BOILERPLATE
     
     
@@ -957,7 +966,7 @@ def main():
     # The trackers initializes automatically on the main process.
     if accelerator.is_main_process:
         tracker_config = dict(vars(args))
-        accelerator.init_trackers(args.tracker_project_name, tracker_config)
+        accelerator.init_trackers(args.tracker_project_name, tracker_config, init_kwargs={"wandb": {"name": args.run_name, "entity": "fantastic_team"}})
 
     # Training initialization
     total_batch_size = args.train_batch_size * accelerator.num_processes * args.gradient_accumulation_steps

@@ -1,0 +1,70 @@
+10/30/2024 03:53:55 - INFO - __main__ - ***** Running training *****
+10/30/2024 03:53:55 - INFO - __main__ -   Num examples = 85172
+10/30/2024 03:53:55 - INFO - __main__ -   Num Epochs = 12
+10/30/2024 03:53:55 - INFO - __main__ -   Instantaneous batch size per device = 1
+10/30/2024 03:53:55 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 2048
+10/30/2024 03:53:55 - INFO - __main__ -   Gradient Accumulation steps = 512
+10/30/2024 03:53:55 - INFO - __main__ -   Total optimization steps = 500
+Checkpoint 'latest' does not exist. Starting a new training run.
+Steps:   0%|▏                                                                                            | 1/500 [01:30<12:33:24, 90.59s/it, implicit_acc=0.25, lr=4.1e-8, step_loss=0.771]10/30/2024 03:55:26 - INFO - torch.nn.parallel.distributed - Reducer buckets have been rebuilt in this iteration.
+Steps:  20%|██████████████████▏                                                                        | 100/500 [1:01:11<04:18,  1.55it/s, implicit_acc=0.75, lr=4.01e-6, step_loss=0.676]10/30/2024 04:55:07 - INFO - accelerate.accelerator - Saving current state to diffusion-dpo-sd15/checkpoint-100
+Configuration saved in diffusion-dpo-sd15/checkpoint-100/unet/config.json
+Model weights saved in diffusion-dpo-sd15/checkpoint-100/unet/diffusion_pytorch_model.safetensors
+10/30/2024 04:55:18 - INFO - accelerate.checkpointing - Optimizer state saved in diffusion-dpo-sd15/checkpoint-100/optimizer.bin
+10/30/2024 04:55:18 - INFO - accelerate.checkpointing - Scheduler state saved in diffusion-dpo-sd15/checkpoint-100/scheduler.bin
+10/30/2024 04:55:18 - INFO - accelerate.checkpointing - Gradient scaler state saved in diffusion-dpo-sd15/checkpoint-100/scaler.pt
+10/30/2024 04:55:18 - INFO - accelerate.checkpointing - Random states saved in diffusion-dpo-sd15/checkpoint-100/random_states_0.pkl
+10/30/2024 04:55:18 - INFO - __main__ - Saved state to diffusion-dpo-sd15/checkpoint-100
+10/30/2024 04:55:18 - INFO - __main__ - Pretty sure saving/loading is fixed but proceed cautiously
+Steps:  40%|████████████████████████████████████                                                      | 200/500 [1:02:25<03:11,  1.57it/s, implicit_acc=0.75, lr=8.11e-6, step_loss=0.0571]10/30/2024 04:56:21 - INFO - accelerate.accelerator - Saving current state to diffusion-dpo-sd15/checkpoint-200
+Configuration saved in diffusion-dpo-sd15/checkpoint-200/unet/config.json
+Model weights saved in diffusion-dpo-sd15/checkpoint-200/unet/diffusion_pytorch_model.safetensors
+10/30/2024 04:56:32 - INFO - accelerate.checkpointing - Optimizer state saved in diffusion-dpo-sd15/checkpoint-200/optimizer.bin
+10/30/2024 04:56:32 - INFO - accelerate.checkpointing - Scheduler state saved in diffusion-dpo-sd15/checkpoint-200/scheduler.bin
+10/30/2024 04:56:32 - INFO - accelerate.checkpointing - Gradient scaler state saved in diffusion-dpo-sd15/checkpoint-200/scaler.pt
+10/30/2024 04:56:32 - INFO - accelerate.checkpointing - Random states saved in diffusion-dpo-sd15/checkpoint-200/random_states_0.pkl
+10/30/2024 04:56:32 - INFO - __main__ - Saved state to diffusion-dpo-sd15/checkpoint-200
+10/30/2024 04:56:32 - INFO - __main__ - Pretty sure saving/loading is fixed but proceed cautiously
+Steps:  60%|███████████████████████████████████████████████████████▊                                     | 300/500 [1:03:40<02:07,  1.57it/s, implicit_acc=0.5, lr=1.22e-5, step_loss=0.85]10/30/2024 04:57:36 - INFO - accelerate.accelerator - Saving current state to diffusion-dpo-sd15/checkpoint-300
+Configuration saved in diffusion-dpo-sd15/checkpoint-300/unet/config.json
+Model weights saved in diffusion-dpo-sd15/checkpoint-300/unet/diffusion_pytorch_model.safetensors
+10/30/2024 04:57:46 - INFO - accelerate.checkpointing - Optimizer state saved in diffusion-dpo-sd15/checkpoint-300/optimizer.bin
+10/30/2024 04:57:46 - INFO - accelerate.checkpointing - Scheduler state saved in diffusion-dpo-sd15/checkpoint-300/scheduler.bin
+10/30/2024 04:57:46 - INFO - accelerate.checkpointing - Gradient scaler state saved in diffusion-dpo-sd15/checkpoint-300/scaler.pt
+10/30/2024 04:57:46 - INFO - accelerate.checkpointing - Random states saved in diffusion-dpo-sd15/checkpoint-300/random_states_0.pkl
+10/30/2024 04:57:46 - INFO - __main__ - Saved state to diffusion-dpo-sd15/checkpoint-300
+10/30/2024 04:57:46 - INFO - __main__ - Pretty sure saving/loading is fixed but proceed cautiously
+Steps:  80%|████████████████████████████████████████████████████████████████████████▊                  | 400/500 [1:04:54<01:03,  1.57it/s, implicit_acc=0.75, lr=1.63e-5, step_loss=0.556]10/30/2024 04:58:50 - INFO - accelerate.accelerator - Saving current state to diffusion-dpo-sd15/checkpoint-400
+Configuration saved in diffusion-dpo-sd15/checkpoint-400/unet/config.json
+Model weights saved in diffusion-dpo-sd15/checkpoint-400/unet/diffusion_pytorch_model.safetensors
+10/30/2024 04:59:01 - INFO - accelerate.checkpointing - Optimizer state saved in diffusion-dpo-sd15/checkpoint-400/optimizer.bin
+10/30/2024 04:59:01 - INFO - accelerate.checkpointing - Scheduler state saved in diffusion-dpo-sd15/checkpoint-400/scheduler.bin
+10/30/2024 04:59:01 - INFO - accelerate.checkpointing - Gradient scaler state saved in diffusion-dpo-sd15/checkpoint-400/scaler.pt
+10/30/2024 04:59:01 - INFO - accelerate.checkpointing - Random states saved in diffusion-dpo-sd15/checkpoint-400/random_states_0.pkl
+10/30/2024 04:59:01 - INFO - __main__ - Saved state to diffusion-dpo-sd15/checkpoint-400
+10/30/2024 04:59:01 - INFO - __main__ - Pretty sure saving/loading is fixed but proceed cautiously
+Steps: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 500/500 [1:06:08<00:00,  1.56it/s, implicit_acc=0.75, lr=2.04e-5, step_loss=2.52]10/30/2024 05:00:04 - INFO - accelerate.accelerator - Saving current state to diffusion-dpo-sd15/checkpoint-500
+Configuration saved in diffusion-dpo-sd15/checkpoint-500/unet/config.json
+Model weights saved in diffusion-dpo-sd15/checkpoint-500/unet/diffusion_pytorch_model.safetensors
+10/30/2024 05:00:15 - INFO - accelerate.checkpointing - Optimizer state saved in diffusion-dpo-sd15/checkpoint-500/optimizer.bin
+10/30/2024 05:00:15 - INFO - accelerate.checkpointing - Scheduler state saved in diffusion-dpo-sd15/checkpoint-500/scheduler.bin
+10/30/2024 05:00:15 - INFO - accelerate.checkpointing - Gradient scaler state saved in diffusion-dpo-sd15/checkpoint-500/scaler.pt
+10/30/2024 05:00:15 - INFO - accelerate.checkpointing - Random states saved in diffusion-dpo-sd15/checkpoint-500/random_states_0.pkl
+10/30/2024 05:00:15 - INFO - __main__ - Saved state to diffusion-dpo-sd15/checkpoint-500
+10/30/2024 05:00:15 - INFO - __main__ - Pretty sure saving/loading is fixed but proceed cautiously
+Steps: : 510it [1:06:31,  1.36s/it, implicit_acc=0.75, lr=2.05e-5, step_loss=1.74e-11]/home/hanyang/anaconda3/envs/diffusion-dpo/lib/python3.11/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+{'requires_safety_checker'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                           Loaded feature_extractor as CLIPImageProcessor from `feature_extractor` subfolder of runwayml/stable-diffusion-v1-5.
+`text_config_dict` is provided which will be used to initialize `CLIPTextConfig`. The value `text_config["id2label"]` will be overriden.                             | 0/7 [00:00<?, ?it/s]
+Loaded safety_checker as StableDiffusionSafetyChecker from `safety_checker` subfolder of runwayml/stable-diffusion-v1-5.
+                                                                                                                                                                                           {'prediction_type', 'timestep_spacing'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as PNDMScheduler from `scheduler` subfolder of runwayml/stable-diffusion-v1-5.                                                              | 3/7 [00:00<00:00, 11.23it/s]
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of runwayml/stable-diffusion-v1-5.
+Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 22.94it/s]
+Configuration saved in diffusion-dpo-sd15/vae/config.json
+Model weights saved in diffusion-dpo-sd15/vae/diffusion_pytorch_model.safetensors
+Configuration saved in diffusion-dpo-sd15/unet/config.json
+Model weights saved in diffusion-dpo-sd15/unet/diffusion_pytorch_model.safetensors
+Configuration saved in diffusion-dpo-sd15/scheduler/scheduler_config.json
+Configuration saved in diffusion-dpo-sd15/model_index.json

@@ -1,0 +1,11 @@
+{"time":"2024-10-30T03:31:04.777547798Z","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T03:31:04.777558965Z","level":"INFO","msg":"created symlink","path":"/home/hanyang/Improved-RLHF-for-Diffusion-Models/DPO/DiffusionDPO/wandb/run-20241030_033104-50z0nhha/logs/debug-core.log"}
+{"time":"2024-10-30T03:31:04.892526291Z","level":"INFO","msg":"created new stream","id":"50z0nhha"}
+{"time":"2024-10-30T03:31:04.892585319Z","level":"INFO","msg":"stream: started","id":"50z0nhha"}
+{"time":"2024-10-30T03:31:04.892793847Z","level":"INFO","msg":"sender: started","stream_id":"50z0nhha"}
+{"time":"2024-10-30T03:31:04.892827887Z","level":"INFO","msg":"handler: started","stream_id":{"value":"50z0nhha"}}
+{"time":"2024-10-30T03:31:04.892738243Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"50z0nhha"}}
+{"time":"2024-10-30T03:31:05.401077478Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T03:33:34.206148578Z","level":"INFO","msg":"stream: closing","id":"50z0nhha"}
+{"time":"2024-10-30T03:33:34.206188484Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T03:33:34.206914562Z","level":"INFO","msg":"Stopped system monitor"}
